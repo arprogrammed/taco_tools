@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Inter } from 'next/font/google';
-import { useRouter } from 'next/router';
-import styles from '@/styles/Worked.module.css';
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { Inter } from "next/font/google";
+import { useRouter } from "next/router";
+import styles from "@/styles/Worked.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
     const router = useRouter();
@@ -29,8 +29,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>You've Brigaded {props.total} Times!</title>
-        <meta name="description" content="This results page will show you how many times you've brigaded in the last 24hrs." />
+        <title>You"ve Brigaded {props.total} Times!</title>
+        <meta name="description" content="This results page will show you how many times you have brigaded in the last 24hrs." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

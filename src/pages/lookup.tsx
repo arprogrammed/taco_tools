@@ -4,7 +4,7 @@ import Image from "next/image";
 import { printStatus, printActions24hr } from "@/lib/actions";
 import { useState } from "react";
 import Router from "next/router";
-import styles from '@/styles/Lookup.module.css';
+import styles from "@/styles/Lookup.module.css";
 
 interface Opts {
   healthCheck: Check;
@@ -41,7 +41,7 @@ export default function Lookup({ healthCheck}: Opts) {
 
     countData().then((data)=>{
       Router.push({
-        pathname: '/worked',
+        pathname: "/worked",
         query: {
           total: data.total,
         },
@@ -60,7 +60,7 @@ export default function Lookup({ healthCheck}: Opts) {
       <main className={styles.main}>
         <div className={styles.description}>
           <h1>The WAX Endpoint Status Is: {healthCheck.status}</h1>
-          <p>If the endpoint status is not OK then you'll not be able to run the check below!</p>
+          <p>If the endpoint status is not OK then you will not be able to run the check below!</p>
         </div>
         <Image src="/brigade_hellmutt.png" width={300} height={250} alt="Brigadier HellMutt" />
         <p className={styles.imgCap}>THE Brigadier Hellmutt!</p>
