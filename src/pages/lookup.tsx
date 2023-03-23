@@ -4,7 +4,7 @@ import Image from "next/image";
 import { printStatus, printActions24hr } from "@/lib/actions";
 import { useState } from "react";
 import Router from "next/router";
-import styles from '@/styles/Lookup.module.css'
+import styles from '@/styles/Lookup.module.css';
 
 interface Opts {
   healthCheck: Check;
