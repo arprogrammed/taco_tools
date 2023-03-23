@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>You"ve Brigaded {props.total} Times!</title>
+        <title>You have Brigaded {props.total} Times!</title>
         <meta name="description" content="This results page will show you how many times you have brigaded in the last 24hrs." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
