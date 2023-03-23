@@ -1,38 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a Next.js project bootstrapped with create-next-app.
 
-## Getting Started
+## Taco Tools App
 
-First, run the development server:
+This app is a first run designed to showcase my abilities with Next.js, React, CSS, HTML, Javascript, API Routes, API integrations, passing Props and more! My skills in many of these areas are at a developmental support level.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## What Does It Do?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Right now it takes the edge user to a page for searching with their Wax Blockchain wallet address to obtain the amount of times they have "brigaded" or signed workopts with their wallet in the last 24hrs.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## What's Next?
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+As the Wax Blockchain universe expands I want to leverage more Historical Based API calls to design community tools with MongoDB and create sites for blockchain communities. This would allow them to have a "virtual homebase" build within an app that provides them leaderboard tools, lookups, and contest tools for incentives to further build the community.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Future Employers and Collaborators If you have any more questions or would like to reach me feel free to reach out at anthony.r.programmer@gmail.com. I work hard to take a D.R.Y. approach and keep my code readable and clean. (Seeking to always improve!)

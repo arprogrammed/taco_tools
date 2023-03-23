@@ -1,0 +1,78 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+    font-family: var(--font-cur);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+    max-width: var(--max-width);
+    width: 100%;
+    z-index: 2;
+    font-family: var(--font-cur);
+}
+
+.imgCap {
+    margin-bottom: 40px;
+    color: #ff6700;
+}
+
+.formWallet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    font-family: var(--font-cur); 
+    padding: 10px;
+    background-color: rgba(119, 136, 153, 0.507);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.formWallet label {
+    padding: 10px;
+    font-size: large;
+}
+
+.mainButton {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #ff6700;
+    border: 2px solid #e45b00;
+    border-radius: 10px;
+    box-shadow: var(--secondary-glow);
+    color: white;
+    font-family: var(--font-cur);
+    font-weight: 600;
+    font-size: large;
+    text-align: center;
+    box-shadow: var(--button-set);
+}
+
+.mainButton:hover {
+    box-shadow: var(--button-glow);
+}
+
+.link:hover {
+    text-shadow: var(--text-glow);
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      min-height: 100vh;
+      font-family: var(--font-cur);
+    }
+}
