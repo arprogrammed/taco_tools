@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Router from "next/router";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-
-
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
@@ -21,6 +20,7 @@ export default function Home() {
           <h1>🌮 Taco Tools 🌮</h1>
           <p>Click the link below to find out how many times you have brigaded on your wallet in the last 24hrs!</p>
           <Link className={styles.mainButton} href="/lookup">Take Me To Your Salad Spinner!</Link>
+          <Link className={styles.mainButton} href="/forsale">Show Me Your Assets!</Link>
         </div>
         <div className={styles.description_1}>
           <div className={styles.container}>

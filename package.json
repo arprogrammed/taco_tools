@@ -13,12 +13,20 @@
     "@types/node": "18.14.5",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "@waxio/waxjs": "^1.4.2",
+    "atomicmarket": "^1.1.6",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "isomorphic-fetch": "^3.0.0",
+    "mongoose": "^7.2.0",
     "next": "13.2.3",
+    "node-fetch": "^3.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "swr": "^2.1.5",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.36"
   }
 }

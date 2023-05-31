@@ -8,23 +8,23 @@ import styles from "@/styles/Worked.module.css";
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
-    const router = useRouter();
+  const router = useRouter();
 
-    const {query: {
-        total,
-    }} = router;
+  const {query: {
+      total,
+  }} = router;
 
-    const props = {total}
+  const props = {total}
 
-    const count = props.total?.toString();
-    let value = true;
-    if (!count) {
-      value = true;
-    } else {
-      const countInt = parseInt(count);
-      const truthy = () => {if(countInt <= 0){return true}else{return false}};
-      value = truthy();
-    }
+  const count = props.total?.toString();
+  let value = true;
+  if (!count) {
+    value = true;
+  } else {
+    const countInt = parseInt(count);
+    const truthy = () => {if(countInt <= 0){return true}else{return false}};
+    value = truthy();
+  }
 
   return (
     <>

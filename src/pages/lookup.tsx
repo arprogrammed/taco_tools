@@ -22,7 +22,7 @@ type Check = {
 //   total: number;
 // };
 
-export default function Lookup({ healthCheck}: Opts) {
+export default function Lookup({healthCheck}: Opts) {
   const [user, setUser] = useState("");
 
   function handleSubmit(e: { preventDefault: () => void; }){

@@ -29,3 +29,27 @@ export async function printActions24hr(eUser) {
   return count;
 };
 
+export function imgPicker(obj) {
+  let url = '';
+  if (obj.template.immutable_data.img !== undefined) {
+      if ((obj.template.immutable_data.img).slice(0,4) === 'http') {
+        url = ('https://atomichub-ipfs.com/ipfs/' + obj.collection.img);
+        return url
+      } else {
+        url = ('https://atomichub-ipfs.com/ipfs/' + obj.template.immutable_data.img);
+        return url
+      }
+  } else {
+      url = ('https://atomichub-ipfs.com/ipfs/' + obj.collection.img);
+      return url
+  }
+}
+
+export function notNull(obj) {
+  let result = 0.00;
+  if (obj == 0) {
+    return result
+  } else {
+    return obj
+  }
+}

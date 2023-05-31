@@ -1,5 +1,5 @@
-import { printActions24hr } from '@/lib/actions'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { printActions24hr } from '@/lib/actions';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {
   total: number
