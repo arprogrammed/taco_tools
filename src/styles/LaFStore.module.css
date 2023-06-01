@@ -6,7 +6,6 @@
   text-align: center;
   padding: 2rem;
   min-height: 100vh;
-  font-family: var(--font-cur);
 }
 
 .main.description {
@@ -16,7 +15,6 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-cur);
 }
 
 .description h1 {
@@ -107,7 +105,7 @@
   grid-template-columns: repeat(3, 60px [col-start]);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .main {
     display: flex;
     flex-direction: column;
@@ -116,7 +114,6 @@
     text-align: center;
     padding: 2rem;
     min-height: 100vh;
-    font-family: var(--font-cur);
   }
 
   .container {

@@ -5,7 +5,6 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-  font-family: var(--font-cur);
 }
 
 .main.description {
@@ -14,10 +13,11 @@
   align-items: inherit;
   text-align: center;
   font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
   z-index: 2;
-  font-family: var(--font-cur);
+}
+
+.description p {
+  max-width: 550px;
 }
 
 .description h1 {
@@ -37,7 +37,6 @@
   border-radius: 10px;
   box-shadow: var(--secondary-glow);
   color: white;
-  font-family: var(--font-cur);
   font-weight: 600;
   font-size: large;
   text-align: center;
@@ -56,7 +55,6 @@
   font-size: 0.85rem;
   max-width: 100%;
   z-index: 2;
-  font-family: var(--font-cur);
 }
 
 .container {
@@ -75,7 +73,7 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .main {
     display: flex;
     flex-direction: column;
@@ -84,7 +82,6 @@
     text-align: center;
     padding: 2rem;
     min-height: 100vh;
-    font-family: var(--font-cur);
   }
 
   .mainButton {
@@ -96,7 +93,6 @@
     border-radius: 10px;
     box-shadow: var(--secondary-glow);
     color: white;
-    font-family: var(--font-cur);
     font-weight: 600;
     font-size: large;
     text-align: center;

@@ -5,7 +5,6 @@
     align-items: center;
     padding: 6rem;
     min-height: 100vh;
-    font-family: var(--font-cur);
 }
 
 .description {
@@ -17,7 +16,6 @@
     max-width: var(--max-width);
     width: 100%;
     z-index: 2;
-    font-family: var(--font-cur);
 }
 
 .imgCap {
@@ -28,8 +26,7 @@
 .formWallet {
     display: flex;
     flex-direction: column;
-    justify-content: center;   
-    font-family: var(--font-cur); 
+    justify-content: center;
     padding: 10px;
     background-color: rgba(119, 136, 153, 0.507);
     border-radius: 10px;
@@ -49,7 +46,6 @@
     border-radius: 10px;
     box-shadow: var(--secondary-glow);
     color: white;
-    font-family: var(--font-cur);
     font-weight: 600;
     font-size: large;
     text-align: center;
@@ -73,6 +69,5 @@
       text-align: center;
       padding: 2rem;
       min-height: 100vh;
-      font-family: var(--font-cur);
     }
 }
