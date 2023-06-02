@@ -15,7 +15,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <h1>🌮 Taco Tools 🌮</h1>
-          <p>This is my hobby project that I use to tinker with WAX chain tools and APIs. Check out the salad spinner to see how many times you've brigaded in the last 24hrs. Or peruse my NFTs for sale in "Show me your assets!" Enjoy!</p>
+          <p>This is my hobby project that I use to tinker with WAX chain tools and APIs. Check out the salad spinner to see how many times you have brigaded in the last 24hrs. Or peruse my NFTs for sale in show me your assets. Enjoy!</p>
           <Link className={styles.mainButton} href="/lookup">Show Me Your Salad Spinner!</Link>
           <Link className={styles.mainButton} href="/forsale">Show Me Your Assets!</Link>
         </div>
