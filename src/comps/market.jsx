@@ -1,13 +1,22 @@
 import React from 'react';
 import useSWR from 'swr';
 import SaleItem from '@/comps/saleitem';
+import { useState } from "react";
+import Pagination from "@/comps/pagination";
 import styles from './../styles/LaFStore.module.css';
 import { singleWordUpper, truncAtor } from '@/lib/stracts';
-import { imgPicker } from '@/lib/actions';
+import { imgPicker, paginate } from '@/lib/actions';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Market = () => {
+    const [currPage, setCurrPage] = useState(1);
+    const pageSize = 16;
+
+    const onPageChange = (page) => {
+    setCurrPage(page);
+    }
+
     const waxPrec = 100000000;
     const { data, error, isLoading } = useSWR(
         'https://wax.api.atomicassets.io/atomicmarket/v2/sales?state=1&seller=tqzke.c.wam&page=1&limit=100&order=desc&sort=created',
@@ -15,10 +24,10 @@ const Market = () => {
     );
     if (error) return <div>An error has occurred.</div>;
     if (isLoading) return <div>Loading...</div>;
-    
+    const paginatedPosts = paginate(data.data, currPage, pageSize);
     return (
         <div className={styles.marketcontainer}>
-            {data.data.map((item, index) => <SaleItem 
+            {paginatedPosts.map((item, index) => <SaleItem 
                 key={index} 
                 id={index} 
                 sale_id={item.sale_id}
@@ -32,6 +41,12 @@ const Market = () => {
                 img={imgPicker(item.assets[0])}
                 colcImg={'https://atomichub-ipfs.com/ipfs/' + item.assets[0].collection.img}
             />)}
+            <Pagination
+                items={data.data.length}
+                currPage={currPage}
+                pageSize={pageSize}
+                onPageChange={onPageChange}
+            />
         </div>
     );
 }

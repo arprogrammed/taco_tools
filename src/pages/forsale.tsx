@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import Market from "@/comps/market"
+import Market from "@/comps/market";
 import styles from "@/styles/LaFStore.module.css";
 
 export default function Forsale() {
-
+  
   return (
     <>
       <Head>

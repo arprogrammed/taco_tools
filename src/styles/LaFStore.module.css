@@ -105,6 +105,61 @@
   grid-template-columns: repeat(3, 60px [col-start]);
 }
 
+.pagecontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagecontainer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.pageItem {
+  margin: 5px;
+  padding: 5px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #ff6700;
+}
+
+.pageItem:hover {
+  margin: 5px;
+  padding: 5px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 17, 70);
+}
+
+.pageItem a:hover {
+  color:rgb(0, 17, 70);
+}
+
+.pageItemActive {
+  margin: 5px;
+  padding: 5px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 17, 70);
+}
+
+.pageItemLinkActive {
+  color: rgb(0, 17, 70);
+}
+
+.pageItemLink {
+  color: #ff6700;
+  padding: 2em;
+  margin: -2em;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     display: flex;
