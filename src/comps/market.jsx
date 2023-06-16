@@ -3,18 +3,25 @@ import useSWR from 'swr';
 import SaleItem from '@/comps/saleitem';
 import { useState } from "react";
 import Pagination from "@/comps/pagination";
+import Dropdown from "@/comps/filteroptions";
 import styles from './../styles/LaFStore.module.css';
 import { singleWordUpper, truncAtor } from '@/lib/stracts';
-import { imgPicker, paginate } from '@/lib/actions';
+import { imgPicker, paginate, filters } from '@/lib/actions';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Market = () => {
+    const [sortVal, setSortVal] = useState("ascending");
+    
+    const onSortChange = (value) => {
+        setSortVal(value);   
+    }
+
     const [currPage, setCurrPage] = useState(1);
     const pageSize = 16;
 
     const onPageChange = (page) => {
-    setCurrPage(page);
+        setCurrPage(page);
     }
 
     const waxPrec = 100000000;
@@ -24,9 +31,14 @@ const Market = () => {
     );
     if (error) return <div>An error has occurred.</div>;
     if (isLoading) return <div>Loading...</div>;
-    const paginatedPosts = paginate(data.data, currPage, pageSize);
+    const newData = filters(data.data, sortVal);
+    const paginatedPosts = paginate(newData, currPage, pageSize);
     return (
         <div className={styles.marketcontainer}>
+            <Dropdown 
+                sortValue={sortVal}
+                onSortChange={onSortChange}
+            />
             {paginatedPosts.map((item, index) => <SaleItem 
                 key={index} 
                 id={index} 
@@ -42,7 +54,7 @@ const Market = () => {
                 colcImg={'https://atomichub-ipfs.com/ipfs/' + item.assets[0].collection.img}
             />)}
             <Pagination
-                items={data.data.length}
+                items={newData.length}
                 currPage={currPage}
                 pageSize={pageSize}
                 onPageChange={onPageChange}

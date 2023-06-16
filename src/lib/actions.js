@@ -57,4 +57,43 @@ export function notNull(obj) {
 export const paginate = (items, pageNumber, pageSize) => {
   const startIndex = (pageNumber - 1) * pageSize;
   return items.slice(startIndex, startIndex + pageSize);
- };
+}
+
+export const filters = (data, filter) => {
+  if(filter == "ascending") {
+    const dataOut = data.sort((a, b) => a.listing_price - b.listing_price);
+    return dataOut
+  } else if (filter == "descending") {
+    const dataOut = data.sort((a, b) => b.listing_price - a.listing_price);
+    return dataOut
+  } else if (filter == "az") {
+    const dataOut = data.sort((a, b) => {
+      const nameA = a.assets[0].name.toLowerCase();
+      const nameB = b.assets[0].name.toLowerCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+    return dataOut
+  } else if (filter == "za") {
+    const dataOut = data.sort((a, b) => {
+      const nameA = a.assets[0].name.toLowerCase();
+      const nameB = b.assets[0].name.toLowerCase();
+      if (nameB < nameA) {
+        return -1;
+      }
+      if (nameB > nameA) {
+        return 1;
+      }
+      return 0;
+    });
+    return dataOut
+  } else {
+    const dataOut = data.sort();
+    return dataOut
+  }
+}
